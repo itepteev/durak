@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дурак - Карточная игра</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Дурак</h1>
+            <div class="game-info">
+                <div class="deck-info">
+                    <span>Карт в колоде: </span>
+                    <span id="deck-count">36</span>
+                </div>
+                <div class="trump-info">
+                    <span>Козырь: </span>
+                    <span id="trump-suit">♠</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-board">
+            <!-- Козырь -->
+            <div class="trump-card">
+                <div class="card trump" id="trump-display">
+                    <div class="card-value">6</div>
+                    <div class="card-suit">♠</div>
+                </div>
+            </div>
+
+            <!-- Игровое поле -->
+            <div class="play-area">
+                <div class="attack-area" id="attack-area">
+                    <!-- Карты для отбивания будут добавляться сюда -->
+                </div>
+            </div>
+
+            <!-- Карты компьютера -->
+            <div class="computer-hand">
+                <div class="player-label">Компьютер</div>
+                <div class="cards-container" id="computer-cards">
+                    <!-- Карты компьютера -->
+                </div>
+            </div>
+
+            <!-- Карты игрока -->
+            <div class="player-hand">
+                <div class="player-label">Вы</div>
+                <div class="cards-container" id="player-cards">
+                    <!-- Карты игрока -->
+                </div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button id="start-game" class="btn btn-primary">Начать игру</button>
+            <button id="take-cards" class="btn btn-secondary" disabled>Взять карты</button>
+            <button id="beat-cards" class="btn btn-secondary" disabled>Отбить</button>
+            <button id="done" class="btn btn-success" disabled>Бито</button>
+        </div>
+
+        <div class="game-status">
+            <div id="status-message">Нажмите "Начать игру" для начала</div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для выбора карт -->
+    <div id="card-selection-modal" class="modal">
+        <div class="modal-content">
+            <h3>Выберите карты для атаки</h3>
+            <div id="selection-cards"></div>
+            <div class="modal-buttons">
+                <button id="confirm-selection" class="btn btn-primary">Подтвердить</button>
+                <button id="cancel-selection" class="btn btn-secondary">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для выбора карт для отбивания -->
+    <div id="beat-selection-modal" class="modal">
+        <div class="modal-content">
+            <h3>Выберите карты для отбивания</h3>
+            <div id="beat-selection-cards"></div>
+            <div class="modal-buttons">
+                <button id="confirm-beat" class="btn btn-primary">Подтвердить</button>
+                <button id="cancel-beat" class="btn btn-secondary">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html> 
