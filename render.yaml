@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: durak-game
+    env: static
+    buildCommand: echo "Static site - no build required"
+    startCommand: npx serve -s . -l $PORT
+    envVars:
+      - key: NODE_ENV
+        value: production 

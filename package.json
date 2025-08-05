@@ -1,0 +1,20 @@
+{
+  "name": "durak-game",
+  "version": "1.0.0",
+  "description": "Карточная игра Дурак",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s . -l $PORT",
+    "build": "echo 'Static site - no build required'",
+    "dev": "npx serve -s . -l 3000"
+  },
+  "keywords": ["game", "card", "durak", "static"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 

@@ -60,7 +60,27 @@
    - Нажмите "Deploy"
    - Получите URL вида: `https://your-project.vercel.app`
 
-### 4. Обычный веб-сервер
+### 4. Render.com
+
+#### Шаги:
+1. **Зарегистрируйтесь на Render**:
+   - Перейдите на [render.com](https://render.com)
+   - Создайте аккаунт
+
+2. **Создайте новый сервис**:
+   - Нажмите "New +"
+   - Выберите "Static Site"
+   - Подключите ваш GitHub репозиторий
+
+3. **Настройте деплой**:
+   - Build Command: `echo "Static site - no build required"`
+   - Publish Directory: `.` (точка)
+   - Нажмите "Create Static Site"
+
+4. **Доступ к игре**:
+   - Render автоматически создаст URL вида: `https://your-app-name.onrender.com`
+
+### 5. Обычный веб-сервер
 
 #### Для Apache:
 1. Загрузите файлы в `/var/www/html/` или папку вашего сайта
